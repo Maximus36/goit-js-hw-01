@@ -1,19 +1,18 @@
 const credits = 23580;
-const pricePerDroid = 300;
+const pricePerDroid = 3000;
 let massage;
-let totalPrice;
-let byDroid = promt(`Сколько дроидов хотите купить?`);
+let buyDroid = prompt(`Сколько дроидов хотите купить?`);
 
-if (byDriod === null) {
+if (buyDriod === null) {
 	massage = `Отменено пользователем`;
-} else if (Number.isNaN(Number.parseInt(byDroid))) {
+} else if (Number.isNaN(Number.parseInt(buyDroid))) {
 	massage = `Ошибка ввода данных`;
 } else {
-	totalPrice * byDroid;
+	const totalPrice = pricePerDroid * buyDroid;
 	massage =
 		totalPrice > credits
 			? `Недостаточно средств на счету`
-			: `Вы купили ${byDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов`;
+			: `Вы купили ${buyDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов`;
 }
 
-alert(massage);
+console.log(massage);
