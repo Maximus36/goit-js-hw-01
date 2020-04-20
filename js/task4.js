@@ -3,7 +3,7 @@ const pricePerDroid = 3000;
 let massage;
 let buyDroid = prompt(`Сколько дроидов хотите купить?`);
 
-if (buyDriod === null) {
+if (buyDroid === null) {
 	massage = `Отменено пользователем`;
 } else if (Number.isNaN(Number.parseInt(buyDroid))) {
 	massage = `Ошибка ввода данных`;
